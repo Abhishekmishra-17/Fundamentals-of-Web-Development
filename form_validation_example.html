@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>JavaScript Form Validation</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function form_validate() {
+        var val=document.forms["check_form"]["ur_name"].value;
+        if (val==null || val=="") {
+            alert("Name must be required..!");
+            return false;
+        } else {
+            alert("Successful Validate...");
+        }  
+    }
+    </script>
+
+    <form name="check_form" action="xyz.php" method="post" onSubmit="return form_validate()">
+        Enter Your Full Name: <input type="text" name="ur_name" size="35"/>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>

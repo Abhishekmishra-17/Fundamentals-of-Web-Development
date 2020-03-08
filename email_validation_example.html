@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>JavaScript E-Mail Validation</title>
+</head>
+<body>
+<script type="text/javascript">
+  function validate(form_id, email) {
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var address = document.forms[form_id].elements[email].value;
+    if(reg.test(address) == false) {
+      alert('Invalid Email Address');
+      return false;
+    }
+     else {
+            alert("Successful Validate...");
+        }
+  }
+</script>
+
+<form id="form_id" method="post" action="form_submit_message.php" onsubmit="javascript:return validate('form_id', 'email');">
+  Enter Your Email Address:
+  <input type="text" id="email" name="email" size="35"/>
+  <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>

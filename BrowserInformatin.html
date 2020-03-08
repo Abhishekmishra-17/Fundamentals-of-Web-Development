@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Write a program to display browser information in JavaScript.</title>
+</head>
+<body>
+<form id="t1">
+<p>Write a program to display browser information in JavaScript.</p></br>
+<input type="button" value="clickme" onclick="show()"/>
+</form>
+<script type="text/Javascript">
+function show()
+{
+document.write("Name" + navigator.appName + "</br>");
+document.write("Versioin" + navigator.appVersion + "</br>");document.write("CodeName" + navigator.appCodeName + "</br>");
+document.write("CookieEnable"+ navigator.appCookieEnabled+"</br>");
+document.write("platform"+ navigator.platform+"</br>");
+document.write("plugins"+ navigator.plugins+"</br>"); 	
+}
+</script>
+</body>
+</html>
